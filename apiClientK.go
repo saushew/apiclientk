@@ -143,20 +143,6 @@ type APIClient interface {
 	 *   Возвращает заполненую структуруа типа apiclient.TradeHistory
 	 */
 	GetTradeHistory(symbol string) (H TradeHistory, err error)
-
-
-	/* Получает историю торгов за последние 12 часов и сортирует ее по времени (от болле старого к более новому)
-	 *
-	 * arguments:
-	 *   symbol   text-id пары в формате apiclient
-	 * 		(например "BTC_ETH" слева валюта основная, справа валюта которую покупаем при вызове buy)
-	 *	 	в вид который принимает биржа, необходимо привести самому в этой функции
-	 *
-	 * returns:
-	 *   Возвращает заполненую структуруа типа apiclient.TradeHistory
-	 */
-	GetTradeHistory(symbol string) (H TradeHistory, err error)
-
 	
 	GetDecs(symbol string) (error, *Decimals)
 
