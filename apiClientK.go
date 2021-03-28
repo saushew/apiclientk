@@ -144,7 +144,7 @@ type APIClient interface {
 	 */
 	GetTradeHistory(symbol string) (H TradeHistory, err error)
 	
-	GetDecs(symbol string) (error, *Decimals)
+	GetDecs(symbol string) (*Decimals, error)
 
 	/* Функции доступа к приватным полям реализации. Используются абстрактными
 	 * функциями во внешних модулях (xutils) для упрощения доступа к данным.
